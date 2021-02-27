@@ -8,6 +8,7 @@ public class Main {
         System.out.println("1. Bubble Sort.");
         System.out.println("2. Selection Sort.");
         System.out.println("3. Insertion Sort.");
+        System.out.println("4. Quick Sort.");
     }
 
     public static void main(String[] args) {
@@ -33,6 +34,7 @@ public class Main {
                 case 1 -> sortAlgorithm.bubbleSort(arr);
                 case 2 -> sortAlgorithm.selectionSort(arr);
                 case 3 -> sortAlgorithm.insertionSort(arr);
+                case 4 -> sortAlgorithm.quickSort(arr);
             }
         }
     }
