@@ -9,6 +9,10 @@ public class Main {
         System.out.println("2. Selection Sort.");
         System.out.println("3. Insertion Sort.");
         System.out.println("4. Quick Sort.");
+        System.out.println("5. Merge Sort.");
+        System.out.println("6. Shell Sort.");
+        System.out.println("7. Counting Sort.");
+        System.out.println("8. Radix Sort.");
     }
 
     public static void main(String[] args) {
@@ -35,6 +39,10 @@ public class Main {
                 case 2 -> sortAlgorithm.selectionSort(arr);
                 case 3 -> sortAlgorithm.insertionSort(arr);
                 case 4 -> sortAlgorithm.quickSort(arr);
+                case 5 -> sortAlgorithm.mergeSort(arr);
+                case 6 -> sortAlgorithm.shellSort(arr);
+                case 7 -> sortAlgorithm.countingSort(arr);
+                case 8 -> sortAlgorithm.radixSort(arr);
             }
         }
     }
