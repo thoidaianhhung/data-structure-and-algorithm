@@ -13,6 +13,8 @@ public class Main {
         System.out.println("6. Shell Sort.");
         System.out.println("7. Counting Sort.");
         System.out.println("8. Radix Sort.");
+        System.out.println("9. Heap Sort");
+        System.out.println("0. Exit");
     }
 
     public static void main(String[] args) {
@@ -43,6 +45,8 @@ public class Main {
                 case 6 -> sortAlgorithm.shellSort(arr);
                 case 7 -> sortAlgorithm.countingSort(arr);
                 case 8 -> sortAlgorithm.radixSort(arr);
+                case 9 -> sortAlgorithm.heapSort(arr);
+                default -> System.exit(0);
             }
         }
     }

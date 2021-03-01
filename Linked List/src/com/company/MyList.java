@@ -1,13 +1,31 @@
 package com.company;
 
 public class MyList {
+    Node head;
 
-    public int recursive(int n) {
-        int sum = 0;
-        if(n == 1) {
-            return sum = 1;
-        }
-        return recursive(n - 1) + n;
+    public MyList() {
+        head = null;
     }
 
+    public void appendHead(int x) {
+        Node newNode = new Node(x);
+        if (head == null) {
+            head = newNode;
+        }
+        newNode.next = head;
+        head = newNode;
+    }
+
+    public void appendLast(int x) {
+        Node newNode = new Node(x);
+        if (head == null) {
+            head = newNode;
+        }
+        newNode.next = null;
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
+        last.next = newNode;
+    }
 }
