@@ -100,4 +100,57 @@ public class MyList {
         Node x = new Node(data);
         return x;
     }
+
+    public int searchLinkedList(Node head, int key) {
+        Node current = head;
+        while (current != null) {
+            if (current.data == key) {
+                return current.data;
+            }
+            current = current.next;
+        }
+        return 0;
+    }
+
+    public void deleteNode(int key) {
+        Node temp = head;
+        Node prev = null;
+
+        if (temp.data == key) {
+            head = temp.next;
+            return;
+        }
+
+        while (temp != null && temp.data != key) {
+            prev = temp;
+            temp = temp.next;
+        }
+
+        if (temp == null) {
+            return;
+        }
+
+        prev.next = temp.next;
+    }
+
+    public void deleteNodePosition(int position) {
+        if (head == null) {
+            return;
+        }
+        Node temp = head;
+        if (position == 0) {
+            head = temp.next;
+            return;
+        }
+
+        for (int i = 0; temp != null && i <position - 1; i++) {
+            temp = temp.next;
+        }
+
+        if (temp == null || temp.next == null) {
+            return;
+        }
+        Node next = temp.next.next;
+        temp.next = next;
+    }
 }
