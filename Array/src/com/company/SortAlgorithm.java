@@ -157,7 +157,7 @@ public class SortAlgorithm {
         printArray(b);
     }
 
-    public int shellSortSolution(int[] arr) {
+    public void shellSortSolution(int[] arr) {
         int n = arr.length;
         for (int h = n / 2; h > 0; h /= 2) {
             for (int i = h; i < n; i++) {
@@ -170,7 +170,6 @@ public class SortAlgorithm {
 
             }
         }
-        return 0;
     }
 
     public void shellSort(int[] arr) {
@@ -190,8 +189,8 @@ public class SortAlgorithm {
             count[i] = 0;
         }
 
-        for (int i = 0; i < n; i++) {
-            ++count[arr[i]];
+        for (int j : arr) {
+            ++count[j];
         }
 
         for (int i = 1; i <= 255; i++) {
@@ -244,9 +243,7 @@ public class SortAlgorithm {
             --count[(arr[i] / exp) % 10];
         }
 
-        for (int i = 0; i < n; i++) {
-            arr[i] = output[i];
-        }
+        if (n >= 0) System.arraycopy(output, 0, arr, 0, n);
     }
 
     public void radixSortSolution(int[] arr, int n) {
