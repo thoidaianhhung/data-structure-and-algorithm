@@ -16,13 +16,43 @@ public class Main {
                 break;
             }
             switch (choice) {
-                case 1 -> myBST.insertNodeBST();
-                case 2 -> myBST.inOrder();
-                case 3 -> myBST.preOrder();
-                case 4 -> myBST.postOrder();
-                case 5 -> myBST.browseTreeByWidth();
-                case 6 -> myBST.searchBSTQueue();
-                case 7 -> myBST.searchBSTRecursive();
+                case 1 -> {
+                    System.out.print("Import element: ");
+                    int key = Integer.parseInt(input.nextLine());
+                    myBST.insertNodeBST(key);
+                }
+                case 2 -> {
+                    myBST.inOrder(myBST.root);
+                    System.out.println();
+                }
+                case 3 -> {
+                    myBST.preOrder(myBST.root);
+                    System.out.println();
+                }
+                case 4 -> {
+                    myBST.postOrder(myBST.root);
+                    System.out.println();
+                }
+                case 5 -> {
+                    myBST.browseTreeByWidth(myBST.root);
+                    System.out.println();
+                }
+                case 6 -> {
+                    System.out.print("Search element: ");
+                    int key = Integer.parseInt(input.nextLine());
+                    myBST.searchBSTQueue(myBST.root, key);
+                    System.out.println();
+                }
+                case 7 -> {
+                    System.out.print("Search element: ");
+                    int key = Integer.parseInt(input.nextLine());
+                    Node result = myBST.searchBSTRecursive(myBST.root, key);
+                    if (result != null) {
+                        System.out.println("Result: " + result.data);
+                    } else {
+                        System.out.println("No result.");
+                    }
+                }
                 case 8 -> myBST.deleteNodeBST();
                 case 9 -> myBST.balanceBST();
                 case 10 -> System.out.println(myBST.nodeMinValue(myBST.root));
