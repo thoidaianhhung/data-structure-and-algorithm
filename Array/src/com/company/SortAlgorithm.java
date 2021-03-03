@@ -25,8 +25,9 @@ public class SortAlgorithm {
                     arrCopy[j + 1] = temp;
                 }
             }
+            printArray(arrCopy);
         }
-        printArray(arrCopy);
+
     }
 
     public void selectionSort(int[] arr) {
@@ -43,8 +44,9 @@ public class SortAlgorithm {
             int temp = b[i];
             b[i] = b[min_index];
             b[min_index] = temp;
+            printArray(b);
         }
-        printArray(b);
+
     }
 
     public void insertionSort(int[] arr) {
@@ -60,8 +62,9 @@ public class SortAlgorithm {
                 j = j - 1;
             }
             b[j + 1] = key;
+            printArray(b);
         }
-        printArray(b);
+
     }
 
     public void sort(int[] arr, int low, int high) {
